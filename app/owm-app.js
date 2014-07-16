@@ -1,9 +1,9 @@
 angular.module('OWMApp', ['ngRoute'])
-    .config($routeProvider) {
+    .config(function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl : './home.html',
             controller : 'HomeCtrl'
-        }).when('/city', {
+        }).when('/cities/:city', {
             templateUrl : './city.html',
             controller : 'CityCtrl'
         });
